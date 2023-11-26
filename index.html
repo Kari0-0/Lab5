@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript. «Події. Регулярні вирази»">
+
+    <title>Литвин К.А. ІК-13 (#5)</title>
+    <script src="script.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <h2>Форма для заповнення</h2>
+    <form id="myForm">
+        <input type="text" id="pib" name="pib" pattern="[А-ЩЬЮЯа-щьюяІіЇїЄє]+\s[А-ЩЬЮЯа-щьюяІіЇїЄє]\.[А-ЩЬЮЯа-щьюяІіЇїЄє]\." placeholder="ПІБ" required oninput="checkInput(this)">
+        <input type="text" id="group" name="group" pattern="[А-ЩЬЮЯа-щьюяІіЇїЄє]{2}-\d{2}" placeholder="Група" required oninput="checkInput(this)">
+        <input type="text" id="phone" name="phone"  pattern="\(\d{3}\)-\d{3}-\d{2}-\d{2}" placeholder="Телефон" required oninput="checkInput(this)">
+        <input type="text" id="faculty" name="faculty"  pattern="[А-ЩЬЮЯа-щьюяІіЇїЄє]{4}" placeholder="Факультет" required oninput="checkInput(this)">
+        <input type="text" id="address" name="address"  pattern="м\.\s\d{6}" placeholder="Адреса" required oninput="checkInput(this)"> 
+
+        <button type="button" onclick="submitForm()">Підтвердити</button>
+    </form>
+<table id="colorTable"></table>
+<input type="color" id="html5colorpicker">
+
+</div>
+
+</body>
+</html>
